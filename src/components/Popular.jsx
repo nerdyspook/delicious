@@ -29,7 +29,7 @@ const Popular = () => {
 
     return (
         <Wrapper>
-            <h2>Popular Picks</h2>
+            <h1>Popular Picks</h1>
 
             <Splide
                 options={{
@@ -37,7 +37,7 @@ const Popular = () => {
                     arrows: false,
                     pagination: false,
                     drag: "free",
-                    gap: "5rem",
+                    gap: "2rem",
                 }}
             >
                 {popular.map((recipe) => {
@@ -62,8 +62,8 @@ const Wrapper = styled.div`
 const Card = styled.div`
     position: relative;
 
-    min-height: 25rem;
-    border-radius: 2rem;
+    min-height: 14rem;
+    border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0px 0px 50px 120px rgba(0, 0, 0, 0.2) inset;
 
@@ -73,19 +73,23 @@ const Card = styled.div`
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 2rem;
+        border-radius: 1rem;
     }
     p {
         position: absolute;
         left: 50%;
         bottom: 0;
         transform: translate(-50%, 0);
+
         color: #ffffff;
-        width: 100%;
         text-align: center;
         font-weight: 600;
         font-size: 1rem;
+
+        width: 100%;
         height: 40%;
+        padding: 1rem;
+
         display: flex;
         align-items: center;
         justify-content: center;
